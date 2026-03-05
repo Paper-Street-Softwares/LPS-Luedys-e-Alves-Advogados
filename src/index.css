@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.unfix-ios-bg {
+  @supports (-webkit-touch-callout: none) {
+    background-attachment: initial !important;
+  }
+}
+
+/* Não remover este item abaixo pois ele faz com que as seções possam alternar */
+:root {
+  --primaryDark: theme(colors.primaryDark);
+}
+/* Não remover este item acima pois ele faz com que as seções possam alternar */
+
+.p-carousel-indicators .p-reset {
+  display: hidden;
+}
+
+.p-carousel-prev,
+.p-carousel-next {
+  position: absolute !important;
+
+  z-index: 10;
+}
+
+/* Mobile até 1023px */
+@media (max-width: 1023px) {
+  .p-carousel-prev,
+  .p-carousel-next {
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 1px;
+    background-color: white;
+  }
+
+  .p-carousel-prev {
+    margin-left: -24px;
+  }
+
+  .p-carousel-next {
+    margin-left: 24px;
+  }
+}
+
+/* Desktop 1024px+ */
+@media (min-width: 1024px) {
+  .p-carousel-prev {
+    left: 0px;
+    bottom: -15px;
+    background-color: white;
+  }
+
+  .p-carousel-next {
+    left: 50px;
+    bottom: -15px;
+    background-color: white;
+  }
+}
