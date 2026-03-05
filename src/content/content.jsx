@@ -132,7 +132,7 @@ const content = {
           🚨
         </>
       ),
-      miniTag: <>RECUPERAÇÃO DE VALORES PERDIDOS EM GOLPES</>,
+      miniTag: <>RECUPERAÇÃO DE VALORES PERDIDOS</>,
       FirstPart: <span>Caiu em</span>,
       Destaque: (
         <span className="destaque relative italic font-bold ">golpe</span>
