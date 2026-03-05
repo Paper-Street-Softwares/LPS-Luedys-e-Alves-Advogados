@@ -102,7 +102,7 @@ function SocialProof({ colorMode }) {
                   className="w-5"
                 />{" "}
                 <p
-                  className={`text-[14px] opacity-70 font-light ${textOpacity}`}
+                  className={`text-[14px] font-light ${textOpacity}`}
                 >
                   Avaliações Google
                 </p>

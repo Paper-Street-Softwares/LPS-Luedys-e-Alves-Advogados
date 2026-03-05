@@ -33,7 +33,7 @@ export default {
         corTitulosBranca: "#FFFFFF",
         corOutrosTextosBranca: "#D6D3D3",
         corTitulosPreto: " #000000",
-        corOutrosTextosPreto: "#404040",
+        corOutrosTextosPreto: "#4C4C4C",
 
         // hex botãoColor wpp
         wppLight: "#2E7027",
