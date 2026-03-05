@@ -127,21 +127,23 @@ const content = {
     hero: {
       minitagIcon: (
         <>
-          <HandCoins className="w-4 h-4" />
+          {/* <HandCoins className="w-4 h-4" /> */}
           {/* <MapPin className="w-4 h-4" /> */}
-          {/* 🚨 */}
+          🚨
         </>
       ),
-      miniTag: <>RECUPERAÇÃO DE GOLPES BANCÁRIOS</>,
+      miniTag: <>RECUPERAÇÃO DE DINHEIRO EM GOLPE</>,
       FirstPart: <span>Perdeu dinheiro em</span>,
       Destaque: (
-        <span className="destaque relative italic font-light">golpe</span>
+        <span className="destaque relative italic font-light ">golpe</span>
       ),
       SecondPart: <span>na internet?</span>,
       subtitle: (
         <p>
-          Mais de R$1.000.000,00 já recuperados. Atendemos casos acima de R$4
-          mil, com possibilidade real de indenização.
+          Mais de <span className="text-primaryLight">R$1.000.000,00</span> já
+          recuperados. Atendemos casos acima de{" "}
+          <span className="text-primaryLight">R$4 mil</span>, com possibilidade
+          real de indenização.
         </p>
       ),
       heroDefaultImage: heroDefaultImg, // img da pessoa mobile
@@ -358,8 +360,8 @@ const content = {
       },
       miniTag: <>QUEM É O LUEDY & ALVES ADVOGADOS</>,
       FirstPart: <span> Especialistas em </span>,
-      Destaque: <span className="italic font-light"> fraudes bancárias</span>,
-      SecondPart: <span></span>,
+      Destaque: <span className="italic font-light"> fraudes </span>,
+      SecondPart: <span>bancárias</span>,
       subtitle: (
         <>Mais de 500 processos ativos e nota máxima de satisfação no Google</>
       ),
@@ -444,7 +446,7 @@ const content = {
     },
     ctaSection: {
       miniTag: <>Fale conosco</>,
-      title: <h1>Fale agora com um Advogado Especialista</h1>,
+      title: <h1>Fale agora com um Advogado especialista</h1>,
       subtitle: (
         <div>
           <p className="mb-6 font-secondFont">

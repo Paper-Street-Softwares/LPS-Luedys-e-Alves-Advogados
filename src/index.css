@@ -33,6 +33,8 @@
     transform: translateX(-50%);
     bottom: 1px;
     background-color: white;
+    padding: 8px;
+    border-radius: 100%;
   }
 
   .p-carousel-prev {
@@ -48,13 +50,17 @@
 @media (min-width: 1024px) {
   .p-carousel-prev {
     left: 0px;
-    bottom: -15px;
+    bottom: 0px;
     background-color: white;
+    padding: 8px;
+    border-radius: 100%;
   }
 
   .p-carousel-next {
-    left: 50px;
-    bottom: -15px;
+    left: 45px;
+    bottom: 0px;
     background-color: white;
+    padding: 8px;
+    border-radius: 100%;
   }
 }
