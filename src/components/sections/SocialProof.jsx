@@ -14,11 +14,11 @@ function SocialProof({ colorMode }) {
   const responsiveOptions = [
     {
       breakpoint: "3000px",
-      numVisible: 2,
+      numVisible: 3,
       numScroll: 2,
     },
     {
-      breakpoint: "1024px",
+      breakpoint: "1280px",
       numVisible: 2,
       numScroll: 1,
     },
@@ -40,26 +40,16 @@ function SocialProof({ colorMode }) {
     );
   };
 
-  const totalPages = Math.ceil(imagens.length / 2);
-
   const [page, setPage] = useState(0);
   const carouselRef = useRef(null);
 
   const next = () => {
-    setPage((prev) => (prev + 1) % totalPages);
+    setPage((prev) => prev + 1);
   };
 
   const prev = () => {
-    setPage((prev) => (prev - 1 + totalPages) % totalPages);
+    setPage((prev) => prev - 1);
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setPage((prev) => (prev + 1) % totalPages);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [totalPages]);
 
   let text, textOpacity, bgContainer;
 
@@ -102,7 +92,7 @@ function SocialProof({ colorMode }) {
           className={`rounded-xl p-5 w-full desktop1:px-10 py-20 max-w-[1215px] ${bgContainer}`}
         >
           <div className="flex w-full justify-between relative flex-col desktop1:flex-row desktop1:gap-6">
-            <div className="font-secondFont tablet1:w-[400px] desktop1:w-[310px] mx-auto">
+            <div className="font-secondFont tablet1:w-[400px] desktop1:w-[310px] mx-auto desktop1:mx-0">
               <section className="flex items-center gap-2 mb-3 w-full justify-center desktop1:justify-start">
                 <img
                   src={imgGoogle}
@@ -161,7 +151,7 @@ function SocialProof({ colorMode }) {
                 </div>
               </section>
 
-              <div className="flex gap-3 mt-4 justify-center desktop1:justify-start mb-4 desktop1:mb-0">
+              <div className="flex gap-3 mt-4 justify-center mb-4 desktop1:justify-start">
                 <button
                   onClick={prev}
                   className="p-2 rounded-full bg-black/10 shadow"
@@ -178,8 +168,8 @@ function SocialProof({ colorMode }) {
               </div>
             </div>
 
-            <div className="desktop1:w-[600px] pb-6 desktop1:pb-0">
-              <div className="w-full mb-6">
+            <div className="desktop1:w-[600px] desktop2:w-[700px] desktop3:w-[800px]">
+              <div className="w-full">
                 <Carousel
                   value={imagens}
                   numScroll={1}
@@ -189,9 +179,9 @@ function SocialProof({ colorMode }) {
                   itemTemplate={productTemplate}
                   circular
                   showIndicators={false}
-                  autoplayInterval={false}
+                  autoplayInterval={3000}
                   page={page}
-                  onPageChange={(e) => setPage(e.page)}
+                  // onPageChange={(e) => setPage(e.page)}
                 />
               </div>
             </div>
