@@ -15,7 +15,7 @@ function SocialProof({ colorMode }) {
     {
       breakpoint: "3000px",
       numVisible: 3,
-      numScroll: 2,
+      numScroll: 1,
     },
     {
       breakpoint: "1280px",
@@ -43,12 +43,14 @@ function SocialProof({ colorMode }) {
   const [page, setPage] = useState(0);
   const carouselRef = useRef(null);
 
+  const totalPages = imagens.length - 2 + 1;
+
   const next = () => {
-    setPage((prev) => prev + 1);
+    setPage((prev) => (prev + 1) % totalPages);
   };
 
   const prev = () => {
-    setPage((prev) => prev - 1);
+    setPage((prev) => (prev - 1 + totalPages) % totalPages);
   };
 
   let text, textOpacity, bgContainer;
@@ -171,6 +173,7 @@ function SocialProof({ colorMode }) {
             <div className="desktop1:w-[600px] desktop2:w-[700px] desktop3:w-[800px]">
               <div className="w-full">
                 <Carousel
+                  ref={carouselRef}
                   value={imagens}
                   numScroll={1}
                   numVisible={2}
@@ -179,9 +182,7 @@ function SocialProof({ colorMode }) {
                   itemTemplate={productTemplate}
                   circular
                   showIndicators={false}
-                  autoplayInterval={3000}
                   page={page}
-                  // onPageChange={(e) => setPage(e.page)}
                 />
               </div>
             </div>
