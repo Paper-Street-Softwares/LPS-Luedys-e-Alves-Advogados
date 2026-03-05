@@ -212,7 +212,7 @@ const content = {
     },
     important: {
       miniTag: <>ATENÇÃO</>,
-      title: <>O que você precisa saber sobre golpes bancários</>,
+      title: <>O que você precisa saber se caiu em algum golpe</>,
       cards: {
         card1: {
           title: <>Mas eu que fiz o Pix… mesmo assim dá pra recuperar?</>,
