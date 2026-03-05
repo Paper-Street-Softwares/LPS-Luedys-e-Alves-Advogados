@@ -212,10 +212,10 @@ function HeroTemplateNovo({
               /> */}
               {obs && (
                 <div className="flex justify-start items-center gap-3 text-sm w-full">
-                  <div className="relative flex">
+                  {/* <div className="relative flex">
                     <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-600 opacity-75"></span>
                     <span className="relative inline-flex rounded-full h-3 w-3 bg-green-600"></span>
-                  </div>
+                  </div> */}
                   {content.texts.hero.obsHero.icon}
                   <span
                     className={`font-secondFont font-light flex gap-2 items-center ${textOpacity}`}

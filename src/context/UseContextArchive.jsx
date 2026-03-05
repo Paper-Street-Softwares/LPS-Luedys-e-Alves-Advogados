@@ -3,7 +3,7 @@ import { createContext, useContext, useState } from "react";
 const ColorModeContext = createContext(null);
 
 export function ColorModeProvider({ children }) {
-  const [colorMode, setColorMode] = useState("dark"); // defaultDark, defaultLight, light, dark
+  const [colorMode, setColorMode] = useState("defaultDark"); // defaultDark, defaultLight, light, dark
 
   const [whatsAppColor] = useState(true); // ativa cor do WhatsApp
   const [showGlobalButton] = useState(false); // ativa as os botões e caixa de alerta

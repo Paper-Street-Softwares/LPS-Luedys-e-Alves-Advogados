@@ -132,18 +132,41 @@ const content = {
           🚨
         </>
       ),
-      miniTag: <>RECUPERAÇÃO DE DINHEIRO EM GOLPE</>,
-      FirstPart: <span>Perdeu dinheiro em</span>,
+      miniTag: <>RECUPERAÇÃO DE VALORES PERDIDOS EM GOLPES</>,
+      FirstPart: <span>Caiu em</span>,
       Destaque: (
-        <span className="destaque relative italic font-light ">golpe</span>
+        <span className="destaque relative italic font-bold ">golpe</span>
       ),
-      SecondPart: <span>na internet?</span>,
+      SecondPart: <span>e perdeu mais de R$ 4.000,00?</span>,
       subtitle: (
         <p>
-          Mais de <span className="text-primaryLight">R$1.000.000,00</span> já
-          recuperados. Atendemos casos acima de{" "}
-          <span className="text-primaryLight">R$4 mil</span>, com possibilidade
-          real de indenização.
+          É possível recuperar os valores perdidos e ainda uma{" "}
+          <span className="text-primaryLight">
+            indenização de até R$ 10 mil reais,
+          </span>{" "}
+          mesmo que o banco tenha dito que não havia o que fazer.
+          <br />
+          <br />
+          <div className="text-sm">
+            <p className="flex items-center gap-2">
+              <span>
+                <Check width={18} className="text-primaryLight" />
+              </span>
+              Somos um Escritório especializado em casos de fraudes
+            </p>
+            <p className="flex items-center gap-2">
+              <span>
+                <Check width={18} className="text-primaryLight" />
+              </span>
+              Mais de R$ 1 milhão recuperados pros nossos clientes
+            </p>
+            <p className="flex items-center gap-2">
+              <span>
+                <Check width={18} className="text-primaryLight" />
+              </span>
+              Mais de 500 processos
+            </p>
+          </div>
         </p>
       ),
       heroDefaultImage: heroDefaultImg, // img da pessoa mobile
@@ -152,12 +175,12 @@ const content = {
       alt: "Imagem ilustrativa da Seção Início",
       ctaButtonAriaLabel:
         "Botão para chamada de ação para contato pelo whatsapp",
-      ctaButtonText: <>Quero analisar meu caso agora</>,
+      ctaButtonText: <>Falar com Especialista agora</>,
       ctaButtonTextSecondary: <>A_Definir</>,
       obsHero: {
-        icon: <> {/* ⚠️ */}</>,
+        icon: <> ⚠️</>,
         iconTwo: <></>,
-        text: <>Atendimento imediato, contrato formal e total transparência.</>,
+        text: <>Cada minuto importa, não deixe para amanhã!</>,
         textTwo: <>A_Definir</>,
       },
       secondaryCta: "Contato",
@@ -242,7 +265,7 @@ const content = {
     features: {
       miniTag: <>NOSSOS SERVIÇOS</>,
       FirstPart: <span> </span>,
-      Destaque: <span className="italic font-light">Recuperação</span>,
+      Destaque: <span className="italic font-bold">Recuperação</span>,
       SecondPart: <span>em golpes bancários</span>,
       subtitle: (
         <> Atuação jurídica especializada para responsabilizar o banco.</>
@@ -360,7 +383,7 @@ const content = {
       },
       miniTag: <>QUEM É O LUEDY & ALVES ADVOGADOS</>,
       FirstPart: <span> Especialistas em </span>,
-      Destaque: <span className="italic font-light"> fraudes </span>,
+      Destaque: <span className="italic font-bold"> fraudes </span>,
       SecondPart: <span>bancárias</span>,
       subtitle: (
         <>Mais de 500 processos ativos e nota máxima de satisfação no Google</>
@@ -488,7 +511,7 @@ const content = {
     steps: {
       miniTag: <>COMO FUNCIONA</>,
       FirstPart: <span> Entenda como vamos</span>,
-      Destaque: <span className="italic font-light"> cuidar </span>,
+      Destaque: <span className="italic font-bold"> cuidar </span>,
       SecondPart: <span>do seu caso</span>,
 
       subtitle: (

@@ -70,7 +70,7 @@ export function Diferences({ colorMode }) {
             >
               <div className="p-8 md:p-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                  <div className="space-y-6 text-left">
+                  <div className="space-y-2 text-left">
                     <motion.div
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
@@ -83,7 +83,7 @@ export function Diferences({ colorMode }) {
                       initial={{ opacity: 0, x: -50 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.8, ease: "easeOut" }}
-                      className={`text-3xl md:text-4xl lg:text-5xl font-mainFont font-bold leading-tight ${text}`}
+                      className={`text-3xl md:text-4xl lg:text-5xl font-mainFont font-light leading-tight ${text}`}
                     >
                       {content.texts.diferences.title}
                     </motion.h2>
