@@ -391,7 +391,7 @@ const content = {
       Destaque: <span className="italic font-bold"> fraudes </span>,
       SecondPart: <span>bancárias</span>,
       subtitle: (
-        <>Mais de 500 processos ativos e nota máxima de satisfação no Google</>
+        <>Mais de 500 processos ativos e nota máxima de satisfação no Google.</>
       ),
       paragraph: (
         <div>
