@@ -140,7 +140,7 @@ const content = {
       SecondPart: <span>e perdeu mais de R$ 4.000,00?</span>,
       subtitle: (
         <p>
-          É possível recuperar os valores perdidos e ainda uma{" "}
+          É possível recuperar os valores perdidos e ainda receber uma{" "}
           <span className="text-primaryLight">
             <strong> indenização de até R$ 10 mil reais,</strong>
           </span>{" "}

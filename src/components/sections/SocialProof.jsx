@@ -14,7 +14,7 @@ function SocialProof({ colorMode }) {
   const responsiveOptions = [
     {
       breakpoint: "3000px",
-      numVisible: 3,
+      numVisible: 2,
       numScroll: 1,
     },
     {
@@ -32,7 +32,7 @@ function SocialProof({ colorMode }) {
         <img
           src={item}
           alt="imagens de fedback"
-          className="max-w-[800px] w-full rounded-xl border-[1px] border-black/20 shadow-[0_0_10px_rgba(0,0,0,0.15)]"
+          className="max-w-[800px] w-full rounded-xl shadow-[0_0_10px_rgba(0,0,0,0.15)]"
           width={634}
           height={625}
         />
@@ -43,7 +43,7 @@ function SocialProof({ colorMode }) {
   const [page, setPage] = useState(0);
   const carouselRef = useRef(null);
 
-  const totalPages = imagens.length - 2 + 1;
+  const totalPages = imagens.length - 1 + 1;
 
   const next = () => {
     setPage((prev) => (prev + 1) % totalPages);
