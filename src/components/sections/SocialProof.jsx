@@ -161,7 +161,7 @@ function SocialProof({ colorMode }) {
                 </div>
               </section>
 
-              <div className="flex gap-3 mt-4">
+              <div className="flex gap-3 mt-4 justify-center desktop1:justify-start mb-4 desktop1:mb-0">
                 <button
                   onClick={prev}
                   className="p-2 rounded-full bg-black/10 shadow"
