@@ -505,8 +505,8 @@ const content = {
         "Advogados que buscavam organização, posicionamento e crescimento encontraram na Paper Street a solução que precisavam.",
       ctaButtonText: "Falar com a equipe agora",
       images: {
-        img1: imgproof1,
-        img2: imgproof2,
+        img1: imgproof2,
+        img2: imgproof1,
         img3: imgproof3,
         img4: imgproof4,
         img5: imgproof5,
