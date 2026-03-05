@@ -92,7 +92,7 @@ function NavbarNovaTemplate({
             }`}
           >
             <a
-              className="cursor-pointer w-[100%] h-[80px] desktop1:h-[110px] flex items-center overflow-hidden"
+              className="cursor-pointer w-[100%] h-[80px] desktop1:h-[110px] flex items-start overflow-hidden"
               href="/"
               onClick={() => window.location.reload()}
               aria-label="recarregar página"
