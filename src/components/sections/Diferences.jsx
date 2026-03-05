@@ -128,7 +128,7 @@ export function Diferences({ colorMode }) {
               </div>
             </div>
           </div>
-          {/* <div className="flex justify-center mt-6">
+          <div className="flex justify-center mt-6">
             <ButtonReflexo
               icon={
                 <svg
@@ -150,7 +150,7 @@ export function Diferences({ colorMode }) {
               }
               className={`clickevent w-fit`}
             />
-          </div> */}
+          </div>
         </div>
       </SectionWrapper>
     </SectionArea>

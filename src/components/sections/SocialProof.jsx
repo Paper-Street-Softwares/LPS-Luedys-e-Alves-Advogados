@@ -81,7 +81,7 @@ function SocialProof({ colorMode }) {
   }
 
   return (
-    <SectionArea className={``}>
+    <SectionArea paddingTopAndBottom={false} className={``}>
       <SectionWrapper>
         {/* <SectionHeaderNovo
           miniTitle={content.texts.socialProof.minitag}
@@ -91,7 +91,7 @@ function SocialProof({ colorMode }) {
         /> */}
 
         <section
-          className={`rounded-xl p-5 w-full desktop1:px-10 py-20 max-w-[1215px] ${bgContainer}`}
+          className={`rounded-xl p-5 w-full desktop1:px-10 pt-10 pb-5 max-w-[1215px] my-6 tablet1:my-10 desktop1:my-12 ${bgContainer}`}
         >
           <div className="flex w-full justify-between relative flex-col desktop1:flex-row desktop1:gap-6">
             <div className="font-secondFont tablet1:w-[400px] desktop1:w-[310px] mx-auto desktop1:mx-0">

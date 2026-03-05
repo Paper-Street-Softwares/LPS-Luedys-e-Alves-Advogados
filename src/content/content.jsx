@@ -140,9 +140,9 @@ const content = {
       SecondPart: <span>e perdeu mais de R$ 4.000,00?</span>,
       subtitle: (
         <p>
-          É possível recuperar os valores perdidos e ainda receber uma{" "}
+          É possível recuperar os valores perdidos e ainda{" "}
           <span className="text-primaryLight">
-            <strong> indenização de até R$ 10 mil reais,</strong>
+            <strong>receber uma indenização de até R$ 10 mil reais,</strong>
           </span>{" "}
           mesmo que o banco tenha dito que não havia o que fazer.
           <br />
@@ -644,6 +644,7 @@ const content = {
           ),
         },
       },
+      ctaButtonText: "Falar com o Advogado agora",
     },
     speed: {
       miniTag: <>A_Definir</>,
