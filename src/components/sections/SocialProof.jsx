@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import content from "../../content/content";
 import { Carousel } from "primereact/carousel";
 import SectionArea from "../sectionElements/SectionArea";
@@ -28,11 +28,11 @@ function SocialProof({ colorMode }) {
 
   const productTemplate = (item) => {
     return (
-      <div className="flex justify-center px-2">
+      <div className="flex justify-center px-2 py-2">
         <img
           src={item}
           alt="imagens de fedback"
-          className="max-w-[800px] w-full rounded-xl"
+          className="max-w-[800px] w-full rounded-xl border-[1px] border-black/20 shadow-[0_0_10px_rgba(0,0,0,0.15)]"
           width={634}
           height={625}
         />
@@ -40,8 +40,56 @@ function SocialProof({ colorMode }) {
     );
   };
 
+  const totalPages = Math.ceil(imagens.length / 2);
+
+  const [page, setPage] = useState(0);
+  const carouselRef = useRef(null);
+
+  const next = () => {
+    setPage((prev) => (prev + 1) % totalPages);
+  };
+
+  const prev = () => {
+    setPage((prev) => (prev - 1 + totalPages) % totalPages);
+  };
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setPage((prev) => (prev + 1) % totalPages);
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [totalPages]);
+
+  let text, textOpacity, bgContainer;
+
+  switch (colorMode) {
+    case "light":
+      bgContainer = "bg-white";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      break;
+
+    case "dark":
+      bgContainer = "bg-black";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      break;
+
+    case "defaultDark":
+      bgContainer = "bg-white";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      break;
+
+    case "defaultLight":
+      bgContainer = "bg-white";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+  }
+
   return (
-    <SectionArea className={`bg-darkOpacity`}>
+    <SectionArea className={``}>
       <SectionWrapper>
         {/* <SectionHeaderNovo
           miniTitle={content.texts.socialProof.minitag}
@@ -50,26 +98,32 @@ function SocialProof({ colorMode }) {
           colorMode={colorMode}
         /> */}
 
-        <section className="bg-black rounded-xl p-5 desktop1:px-10 py-20">
+        <section
+          className={`rounded-xl p-5 w-full desktop1:px-10 py-20 max-w-[1215px] ${bgContainer}`}
+        >
           <div className="flex w-full justify-between relative flex-col desktop1:flex-row desktop1:gap-6">
-            <div className="text-white font-secondFont tablet1:w-[400px] desktop1:w-[300px] mx-auto">
+            <div className="font-secondFont tablet1:w-[400px] desktop1:w-[310px] mx-auto">
               <section className="flex items-center gap-2 mb-3 w-full justify-center desktop1:justify-start">
                 <img
                   src={imgGoogle}
                   alt="Logomarca do Google"
                   className="w-5"
                 />{" "}
-                <p className="text-[14px] opacity-70 font-light">
+                <p
+                  className={`text-[14px] opacity-70 font-light ${textOpacity}`}
+                >
                   Avaliações Google
                 </p>
               </section>
               <section className="mb-6 w-full text-center desktop1:text-start">
-                <h1 className="text-title4 max-w-[300px] mx-auto desktop1:m-0 leading-10">
+                <h1
+                  className={`text-title4 max-w-[310px] mx-auto desktop1:m-0 font-bold leading-10 ${text}`}
+                >
                   O que nossos clientes falam de nós
                 </h1>
               </section>
               <section className="flex gap-4 mb-6 justify-center mx-auto desktop1:mx-0 desktop1:justify-start w-fit">
-                <h1 className="text-title4">4.9</h1>
+                <h1 className={`text-title4 ${textOpacity}`}>4.9</h1>
                 <div>
                   <div className="flex">
                     <Star
@@ -106,43 +160,42 @@ function SocialProof({ colorMode }) {
                   <p className="text-sm opacity-70 font-light">Excelente</p>
                 </div>
               </section>
+
+              <div className="flex gap-3 mt-4">
+                <button
+                  onClick={prev}
+                  className="p-2 rounded-full bg-black/10 shadow"
+                >
+                  <ChevronLeft size={20} />
+                </button>
+
+                <button
+                  onClick={next}
+                  className="p-2 rounded-full bg-black/10 shadow"
+                >
+                  <ChevronRight size={20} />
+                </button>
+              </div>
             </div>
 
-            <div className="desktop1:w-[600px] pb-6">
+            <div className="desktop1:w-[600px] pb-6 desktop1:pb-0">
               <div className="w-full mb-6">
                 <Carousel
                   value={imagens}
                   numScroll={1}
                   numVisible={2}
-                  showNavigators
+                  showNavigators={false}
                   responsiveOptions={responsiveOptions}
                   itemTemplate={productTemplate}
                   circular
                   showIndicators={false}
-                  autoplayInterval={5000}
+                  autoplayInterval={false}
+                  page={page}
+                  onPageChange={(e) => setPage(e.page)}
                 />
               </div>
             </div>
           </div>
-
-          {/* <MotionDivDownToUp className={`mt-6`}>
-            <ButtonReflexo
-              icon={
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width={18}
-                  height={18}
-                  fill="currentColor"
-                  viewBox="0 0 24 24"
-                >
-                  <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.472-.148-.67.15-.197.297-.768.966-.94 1.164-.173.198-.347.223-.644.074-.297-.149-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.207-.242-.579-.487-.5-.67-.51-.173-.007-.372-.009-.571-.009-.198 0-.52.074-.793.372-.273.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.226 1.36.194 1.872.118.571-.085 1.758-.718 2.006-1.412.248-.694.248-1.288.173-1.412-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.896a9.825 9.825 0 012.893 6.994c-.002 5.45-4.436 9.884-9.884 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.158 11.892c0 2.096.547 4.142 1.588 5.94L0 24l6.305-1.654a11.882 11.882 0 005.732 1.463h.005c6.554 0 11.89-5.335 11.892-11.892a11.821 11.821 0 00-3.466-8.413" />
-                </svg>
-              }
-              link="https://tintim.link/whatsapp/065f4e87-42ce-42c4-87f2-420a05c17133/f5b25419-0c1b-4165-95a0-93e1edd1ac0f"
-              label={content.texts.socialProof.ctaButtonText}
-              colorMode={colorMode}
-            />
-          </MotionDivDownToUp> */}
         </section>
       </SectionWrapper>
     </SectionArea>

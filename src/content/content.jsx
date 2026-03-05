@@ -142,7 +142,7 @@ const content = {
         <p>
           É possível recuperar os valores perdidos e ainda uma{" "}
           <span className="text-primaryLight">
-            indenização de até R$ 10 mil reais,
+            <strong> indenização de até R$ 10 mil reais,</strong>
           </span>{" "}
           mesmo que o banco tenha dito que não havia o que fazer.
           <br />
@@ -158,7 +158,12 @@ const content = {
               <span>
                 <Check width={18} className="text-primaryLight" />
               </span>
-              Mais de R$ 1 milhão recuperados pros nossos clientes
+              <p>
+                {" "}
+                Mais de{" "}
+                <strong className="text-primaryLight">R$ 1 milhão </strong>
+                recuperados pros nossos clientes
+              </p>
             </p>
             <p className="flex items-center gap-2">
               <span>

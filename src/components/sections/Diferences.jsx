@@ -41,7 +41,7 @@ export function Diferences({ colorMode }) {
       text = "text-corTitulosPreto";
       textOpacity = "text-corOutrosTextosPreto";
       textDestaque = "text-primaryLight";
-      bgCards = "bg-white shadow";
+      bgCards = "bg-black shadow";
       borderSVG = "border-primaryLight";
       bgContainer = "bg-terciary";
       break;
@@ -66,7 +66,7 @@ export function Diferences({ colorMode }) {
         <div className="container mx-auto relative z-10">
           <div className="max-w-5xl mx-auto">
             <div
-              className={`backdrop-blur-sm rounded-xl overflow-hidden shadow-2xl ${bgContainer}`}
+              className={`backdrop-blur-sm rounded-xl overflow-hidden ${bgContainer}`}
             >
               <div className="p-8 md:p-12">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
