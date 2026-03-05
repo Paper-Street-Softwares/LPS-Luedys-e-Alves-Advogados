@@ -155,6 +155,7 @@ function SocialProof({ colorMode }) {
 
               <div className="flex gap-3 mt-4 justify-center mb-4 desktop1:justify-start">
                 <button
+                  aria-label="Botão de passar imagens de feedback"
                   onClick={prev}
                   className="p-2 rounded-full bg-black/10 shadow"
                 >
@@ -162,6 +163,7 @@ function SocialProof({ colorMode }) {
                 </button>
 
                 <button
+                  aria-label="Botão de passar imagens de feedback"
                   onClick={next}
                   className="p-2 rounded-full bg-black/10 shadow"
                 >
