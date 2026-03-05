@@ -263,7 +263,7 @@ const content = {
         },
       },
       fraseObs: (
-        <>Entre em contato conosco e lhe daremos todo o suporte necessário</>
+        <>Entre em contato conosco e daremos todo o suporte necessário</>
       ),
       ctaButtonText: <>Falar conosco agora pelo WhatsApp</>,
     },
