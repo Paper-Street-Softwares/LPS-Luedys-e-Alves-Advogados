@@ -101,9 +101,7 @@ function SocialProof({ colorMode }) {
                   alt="Logomarca do Google"
                   className="w-5"
                 />{" "}
-                <p
-                  className={`text-[14px] font-light ${textOpacity}`}
-                >
+                <p className={`text-[14px] font-light ${textOpacity}`}>
                   Avaliações Google
                 </p>
               </section>
@@ -178,7 +176,7 @@ function SocialProof({ colorMode }) {
                   ref={carouselRef}
                   value={imagens}
                   numScroll={1}
-                  numVisible={1}
+                  numVisible={3}
                   showNavigators={false}
                   responsiveOptions={responsiveOptions}
                   itemTemplate={productTemplate}
