@@ -31,18 +31,16 @@ function SocialProof({ colorMode }) {
   const carouselRef = useRef(null);
   const totalPages = imagens.length;
 
-  // Funções de navegação manual
   const next = () => setPage((prev) => (prev + 1) % totalPages);
   const prev = () => setPage((prev) => (prev - 1 + totalPages) % totalPages);
 
-  // Autoplay com reinício a cada clique
   useEffect(() => {
     const interval = setInterval(() => {
       setPage((prev) => (prev + 1) % totalPages);
     }, 5000);
 
-    return () => clearInterval(interval); // limpa o intervalo anterior
-  }, [page, totalPages]); // reinicia o contador sempre que `page` mudar
+    return () => clearInterval(interval);
+  }, [page, totalPages]);
 
   // Estilos dependendo do colorMode
   let text, textOpacity, bgContainer;
@@ -76,7 +74,6 @@ function SocialProof({ colorMode }) {
           className={`rounded-xl p-5 w-full desktop1:px-10 pt-10 pb-5 max-w-[1215px] my-6 tablet1:my-10 desktop1:my-12 ${bgContainer}`}
         >
           <div className="flex w-full justify-between relative flex-col desktop1:flex-row desktop1:gap-6">
-            {/* Conteúdo esquerdo */}
             <div className="font-secondFont tablet1:w-[400px] desktop1:w-[310px] mx-auto desktop1:mx-0">
               <section className="flex items-center gap-2 mb-3 w-full justify-center desktop1:justify-start">
                 <img
@@ -115,7 +112,6 @@ function SocialProof({ colorMode }) {
                 </div>
               </section>
 
-              {/* Botões manuais */}
               <div className="flex gap-3 mt-4 justify-center mb-4 desktop1:justify-start">
                 <button
                   aria-label="Voltar"
@@ -134,7 +130,6 @@ function SocialProof({ colorMode }) {
               </div>
             </div>
 
-            {/* Carousel */}
             <div className="desktop1:w-[600px] desktop2:w-[700px] desktop3:w-[800px]">
               <Carousel
                 ref={carouselRef}
