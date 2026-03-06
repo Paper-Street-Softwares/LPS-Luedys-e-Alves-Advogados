@@ -37,7 +37,7 @@ function SocialProof({ colorMode }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setPage((prev) => (prev + 1) % totalPages);
-    }, 5000);
+    }, 10000);
 
     return () => clearInterval(interval);
   }, [page, totalPages]);
