@@ -54,8 +54,8 @@ export const infos = {
   domain: "luedyealvesadvogados.com.br", // Sem "www"
   phone: {
     ddd: "11",
-    firstPart: "95570", // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: "5315", // Apenas os 4 últimos números
+    firstPart: "94885", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "4510", // Apenas os 4 últimos números
   },
   phoneSecundario: {
     ddd: "00",
